@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unlimited Reforged: admin panel for FiveM and RedM</title>
+<meta name="description" content="Unlimited Reforged is a web admin panel and in-game admin menu for FiveM (Qbox, QBCore) and RedM (VORP) servers. Windows and Linux, txAdmin compatible, 12 languages.">
+<meta property="og:title" content="Unlimited Reforged">
+<meta property="og:description" content="Web admin panel and in-game admin menu for FiveM and RedM servers.">
+<meta property="og:image" content="https://asarayja.github.io/unlimited_reforge/img/dash.webp">
+<meta name="theme-color" content="#0a0e27">
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i="skip"></a>
+<header class="top">
+ <div class="wrap bar">
+  <a class="brand" href="#top"><img src="img/logo.png" width="32" height="32" alt=""><span>Unlimited <b>Reforged</b></span></a>
+  <nav aria-label="Main">
+   <a href="#panel" data-i="nav_f"></a><a href="#ingame" data-i="nav_i"></a><a href="#moderation" data-i="nav_m"></a><a href="#redm" data-i="nav_r"></a><a href="#start" data-i="nav_s"></a><a href="#faq" data-i="nav_q"></a>
+  </nav>
+  <div class="lang">
+   <button id="langBtn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="langList"><img id="langFlag" src="flags/en.png" width="20" height="14" alt=""><span id="langCode">EN</span><span aria-hidden="true">&#9662;</span></button>
+   <ul id="langList" role="listbox" hidden></ul>
+  </div>
+ </div>
+</header>
+<main id="main">
+<section class="hero" id="top">
+ <div class="wrap">
+  <img class="logo" src="img/logo.png" width="96" height="96" alt="Unlimited Reforged logo">
+  <p class="badge" data-i="h_badge"></p>
+  <h1 data-i="h_title"></h1>
+  <p class="lead" data-i="h_sub"></p>
+  <p class="cta"><a class="btn primary" href="https://github.com/asarayja/unlimited_reforge/releases" data-i="h_dl"></a><a class="btn" href="#start" data-i="h_start"></a></p>
+  <p class="note" data-i="h_note"></p>
+  <div class="shot hero-shot"><img src="img/dash.webp" width="1400" height="750" alt="" data-alt="c_dash" fetchpriority="high"></div>
+ </div>
+</section>
+
+<section class="wrap" aria-labelledby="sup-h">
+ <h2 id="sup-h" class="sr" data-i="s_title"></h2>
+ <div class="grid4">
+  <article class="card"><h3>FiveM</h3><p data-i="s_fivem_d"></p></article>
+  <article class="card"><h3>RedM</h3><p data-i="s_redm_d"></p></article>
+  <article class="card"><h3 data-i="s_host_t"></h3><p data-i="s_host_d"></p></article>
+  <article class="card"><h3 data-i="s_lang_t"></h3><p data-i="s_lang_d"></p></article>
+ </div>
+</section>
+
+<section class="wrap" id="panel" aria-labelledby="panel-h">
+ <h2 id="panel-h" data-i="w_title"></h2><p class="sub" data-i="w_sub"></p>
+ <ul class="chips"><li data-i="f1"></li><li data-i="f2"></li><li data-i="f3"></li><li data-i="f4"></li><li data-i="f5"></li><li data-i="f6"></li><li data-i="f7"></li><li data-i="f8"></li><li data-i="f9"></li><li data-i="f10"></li><li data-i="f11"></li><li data-i="f12"></li><li data-i="f13"></li><li data-i="f14"></li></ul>
+ <div class="gallery g3"><figure><img src="img/eco.webp" width="1400" height="750" loading="lazy" data-alt="c_eco" alt=""><figcaption data-i="c_eco"></figcaption></figure><figure><img src="img/staff.webp" width="1400" height="750" loading="lazy" data-alt="c_staff" alt=""><figcaption data-i="c_staff"></figcaption></figure><figure><img src="img/veh.webp" width="1400" height="759" loading="lazy" data-alt="c_veh" alt=""><figcaption data-i="c_veh"></figcaption></figure></div>
+</section>
+
+<section class="wrap" id="ingame" aria-labelledby="ig-h">
+ <h2 id="ig-h" data-i="i_title"></h2><p class="sub" data-i="i_sub"></p>
+ <ul class="chips"><li data-i="i1"></li><li data-i="i2"></li><li data-i="i3"></li><li data-i="i4"></li><li data-i="i5"></li><li data-i="i6"></li></ul>
+ <div class="gallery g3"><figure><img src="img/igmap.webp" width="1400" height="706" loading="lazy" data-alt="c_igmap" alt=""><figcaption data-i="c_igmap"></figcaption></figure><figure><img src="img/igcompact.webp" width="1400" height="706" loading="lazy" data-alt="c_igcompact" alt=""><figcaption data-i="c_igcompact"></figcaption></figure><figure><img src="img/igprops.webp" width="1400" height="706" loading="lazy" data-alt="c_igprops" alt=""><figcaption data-i="c_igprops"></figcaption></figure></div>
+</section>
+
+<section class="wrap" id="moderation" aria-labelledby="mod-h">
+ <h2 id="mod-h" data-i="m_title"></h2><p class="sub" data-i="m_sub"></p>
+ <div class="grid3"><article class="card"><h3 data-i="m1t"></h3><p data-i="m1d"></p></article><article class="card"><h3 data-i="m2t"></h3><p data-i="m2d"></p></article><article class="card"><h3 data-i="m3t"></h3><p data-i="m3d"></p></article><article class="card"><h3 data-i="m4t"></h3><p data-i="m4d"></p></article><article class="card"><h3 data-i="m5t"></h3><p data-i="m5d"></p></article><article class="card"><h3 data-i="m6t"></h3><p data-i="m6d"></p></article></div>
+</section>
+
+<section class="wrap" id="redm" aria-labelledby="redm-h">
+ <h2 id="redm-h" data-i="r_title"></h2><p class="sub" data-i="r_sub"></p>
+ <div class="grid3"><article class="card"><h3 data-i="r1t"></h3><p data-i="r1d"></p></article><article class="card"><h3 data-i="r2t"></h3><p data-i="r2d"></p></article><article class="card"><h3 data-i="r3t"></h3><p data-i="r3d"></p></article><article class="card"><h3 data-i="r4t"></h3><p data-i="r4d"></p></article><article class="card"><h3 data-i="r5t"></h3><p data-i="r5d"></p></article></div>
+ <div class="gallery g2"><figure><img src="img/rmap.webp" width="960" height="628" loading="lazy" data-alt="c_rmap" alt=""><figcaption data-i="c_rmap"></figcaption></figure><figure><img src="img/rhorse.webp" width="1400" height="750" loading="lazy" data-alt="c_rhorse" alt=""><figcaption data-i="c_rhorse"></figcaption></figure><figure><img src="img/rgang.webp" width="1400" height="750" loading="lazy" data-alt="c_rgang" alt=""><figcaption data-i="c_rgang"></figcaption></figure><figure><img src="img/rcons.webp" width="1400" height="750" loading="lazy" data-alt="c_rcons" alt=""><figcaption data-i="c_rcons"></figcaption></figure></div>
+</section>
+
+<section class="wrap" id="start" aria-labelledby="start-h">
+ <h2 id="start-h" data-i="g_title"></h2>
+ <ol class="steps"><li data-i="g1"></li><li data-i="g2"></li><li data-i="g3"></li><li data-i="g4"></li><li data-i="g5"></li></ol>
+ <p class="sub" data-i="g_req"></p>
+ <div class="grid2">
+  <article class="card"><h3 data-i="g_win"></h3><pre><code>http://&lt;server-ip&gt;:3000/</code></pre></article>
+  <article class="card"><h3 data-i="g_linux"></h3><pre><code>http://&lt;server-ip&gt;:&lt;game-port&gt;/&lt;folder&gt;/</code></pre></article>
+ </div>
+ <pre class="cfg"><code># server.cfg
+ensure oxmysql
+ensure qbx_core        # or qb-core / vorp_core
+ensure ox_inventory    # or qb-inventory / vorp_inventory
+ensure unlimited-reforge   # your folder name</code></pre>
+ <p class="sub" data-i="g_docs"></p>
+ <p class="sub" data-i="g_up"></p>
+ <p class="cta"><a class="btn primary" href="https://github.com/asarayja/unlimited_reforge/releases" data-i="h_dl"></a></p>
+</section>
+
+<section class="wrap" id="faq" aria-labelledby="faq-h">
+ <h2 id="faq-h" data-i="q_title"></h2>
+ <div class="faq"><details><summary data-i="q1"></summary><p data-i="a1"></p></details><details><summary data-i="q2"></summary><p data-i="a2"></p></details><details><summary data-i="q3"></summary><p data-i="a3"></p></details><details><summary data-i="q4"></summary><p data-i="a4"></p></details><details><summary data-i="q5"></summary><p data-i="a5"></p></details><details><summary data-i="q6"></summary><p data-i="a6"></p></details><details><summary data-i="q7"></summary><p data-i="a7"></p></details></div>
+</section>
+
+<section class="wrap" id="changelog" aria-labelledby="cl-h">
+ <h2 id="cl-h" data-i="l_title"></h2>
+ <p class="sub" data-i="l_body"></p>
+ <p><a class="btn" href="https://github.com/asarayja/unlimited_reforge/releases" data-i="l_link"></a></p>
+</section>
+</main>
+<footer>
+ <div class="wrap">
+  <p data-i="foot"></p>
+  <p><a href="https://github.com/asarayja/unlimited_reforge">GitHub</a> · <a href="https://github.com/asarayja/unlimited_reforge/releases">Releases</a> · <a href="#top" data-i="top"></a></p>
+  <p>&copy; 2026 asarayja</p>
+ </div>
+</footer>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
