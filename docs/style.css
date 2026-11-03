@@ -67,3 +67,36 @@ footer p{margin:0 0 8px}
 @media(max-width:620px){.grid4,.grid3,.grid2,.g3,.g2{grid-template-columns:1fr}.hero{padding-top:36px}.brand span{font-size:.95rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 :lang(ta) h1{font-size:clamp(1.7rem,4.4vw,2.8rem);line-height:1.3}
+.tools{display:flex;gap:10px;flex-wrap:wrap;margin:8px 0 14px}
+.tools input{flex:1 1 240px;min-width:0;padding:11px 14px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:#0d1224;color:#fff;font:inherit}
+.tools button{padding:10px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.06);color:#fff;font:inherit;cursor:pointer}
+.tools button:hover{background:rgba(255,255,255,.12)}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{padding:6px 12px;border-radius:99px;background:rgba(99,102,241,.14);border:1px solid rgba(99,102,241,.35);color:#e0e7ff;text-decoration:none;font-size:.88rem}
+.toc a:hover{background:rgba(99,102,241,.3)}
+.areas{display:grid;gap:10px}
+.area{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:0 18px}
+.area[open]{border-color:rgba(139,92,246,.5)}
+.area summary{cursor:pointer;padding:15px 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap;list-style:none}
+.area summary::-webkit-details-marker{display:none}
+.area summary::before{content:"\25B8";color:#a5b4fc;transition:transform .15s}
+.area[open] summary::before{transform:rotate(90deg)}
+.st{font-weight:600;font-size:1.05rem;flex:1 1 auto}
+.bds{display:flex;gap:6px}
+.bd{font-size:.74rem;padding:2px 9px;border-radius:99px;font-weight:600;border:1px solid}
+.bd.f{color:#bfdbfe;border-color:rgba(96,165,250,.6);background:rgba(59,130,246,.15)}
+.bd.r{color:#fed7aa;border-color:rgba(251,146,60,.6);background:rgba(234,88,12,.15)}
+.ab{padding:0 0 16px}
+.ad{color:var(--sub);margin:0 0 10px}
+.ab ul,.rel ul{margin:0 0 12px;padding-left:20px;color:#e5e7eb}
+.ab li,.rel li{margin-bottom:6px}
+.aw{margin:0;font-size:.9rem;color:var(--sub)}
+.aw b{color:#c4b5fd}
+.rel{margin-bottom:14px}
+.sub2{color:var(--sub);font-weight:400;font-size:.95rem;margin-left:8px}
+.rel h3{margin-bottom:10px}
+.area[hidden]{display:none}
+.btn,.toc a,.chips li,.st{max-width:100%;overflow-wrap:anywhere}
+h1,h2,h3,p,li,summary,figcaption{overflow-wrap:break-word}
+.toc a{min-width:0;overflow-wrap:anywhere;word-break:break-word}.toc{min-width:0}
+.toc a{display:block;white-space:normal;word-break:normal;line-break:anywhere}

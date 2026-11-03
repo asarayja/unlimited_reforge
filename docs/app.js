@@ -1,5 +1,7 @@
 (function(){
- var L=window.I18N, langs=window.I18N_LANGS, KEY='unl-lang';
+ var _F=window.I18N_F||{};for(var c in window.I18N){var f=_F[c]||{};for(var k in f)window.I18N[c][k]=f[k];}
+
+ var L=window.I18N,F=window.I18N_F||{}, langs=window.I18N_LANGS, KEY='unl-lang';
  var map={nb:'no',nn:'no',da:'dk',zh:'cn',et:'et'};
  function detect(){
   try{var s=localStorage.getItem(KEY); if(s&&L[s]) return s;}catch(e){}
@@ -12,6 +14,7 @@
   document.documentElement.lang={no:'nb',dk:'da',cn:'zh-Hans'}[code]||code;
   document.querySelectorAll('[data-i]').forEach(function(el){var k=el.getAttribute('data-i'); el.textContent=d[k]||L.en[k]||'';});
   document.querySelectorAll('[data-alt]').forEach(function(el){var k=el.getAttribute('data-alt'); el.alt=d[k]||L.en[k]||'';});
+  document.querySelectorAll('[data-ph]').forEach(function(el){var k=el.getAttribute('data-ph');el.placeholder=d[k]||L.en[k]||'';el.setAttribute('aria-label',el.placeholder);});
   document.getElementById('langFlag').src='flags/'+code+'.png';
   document.getElementById('langCode').textContent=code.toUpperCase();
   document.getElementById('langBtn').setAttribute('aria-label',(d.langlabel||'Language'));
@@ -35,5 +38,13 @@
  function choose(c){try{localStorage.setItem(KEY,c);}catch(e){} apply(c); close(); btn.focus();}
  btn.addEventListener('click',function(){list.hidden?open():close();});
  document.addEventListener('click',function(e){if(!e.target.closest('.lang'))close();});
+
+ var areas=[].slice.call(document.querySelectorAll('.area')),q=document.getElementById('q'),nr=document.getElementById('noRes');
+ function filter(){var t=q.value.trim().toLowerCase(),n=0;areas.forEach(function(a){var m=!t||a.textContent.toLowerCase().indexOf(t)>-1;a.hidden=!m;if(m){n++;if(t)a.open=true;}});nr.hidden=n>0;}
+ q.addEventListener('input',filter);
+ document.getElementById('expAll').addEventListener('click',function(){areas.forEach(function(a){if(!a.hidden)a.open=true;});});
+ document.getElementById('colAll').addEventListener('click',function(){areas.forEach(function(a){a.open=false;});});
+ document.querySelectorAll('.toc a').forEach(function(a){a.addEventListener('click',function(){q.value='';filter();var d=document.getElementById(a.dataset.open);if(d)d.open=true;});});
+ if(location.hash.indexOf('#f-')===0){var h=document.getElementById(location.hash.slice(1));if(h)h.open=true;}
  apply(detect());
 })();
