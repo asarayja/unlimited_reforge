@@ -14,6 +14,7 @@
   document.documentElement.lang={no:'nb',dk:'da',cn:'zh-Hans'}[code]||code;
   document.querySelectorAll('[data-i]').forEach(function(el){var k=el.getAttribute('data-i'); el.textContent=d[k]||L.en[k]||'';});
   document.querySelectorAll('[data-alt]').forEach(function(el){var k=el.getAttribute('data-alt'); el.alt=d[k]||L.en[k]||'';});
+  document.querySelectorAll('[data-ia]').forEach(function(el){var k=el.getAttribute('data-ia');var t=d[k]||L.en[k]||'';el.setAttribute('aria-label',t);el.setAttribute('title',t);});
   document.querySelectorAll('[data-ph]').forEach(function(el){var k=el.getAttribute('data-ph');el.placeholder=d[k]||L.en[k]||'';el.setAttribute('aria-label',el.placeholder);});
   document.getElementById('langFlag').src='flags/'+code+'.png';
   document.getElementById('langCode').textContent=code.toUpperCase();
@@ -47,4 +48,15 @@
  document.querySelectorAll('.toc a').forEach(function(a){a.addEventListener('click',function(){q.value='';filter();var d=document.getElementById(a.dataset.open);if(d)d.open=true;});});
  if(location.hash.indexOf('#f-')===0){var h=document.getElementById(location.hash.slice(1));if(h)h.open=true;}
  apply(detect());
+})();
+
+/* back to top */
+(function(){
+ var b=document.getElementById('toTop'); if(!b) return;
+ var onScroll=function(){ b.hidden = window.scrollY < 700; };
+ window.addEventListener('scroll', onScroll, {passive:true}); onScroll();
+ b.addEventListener('click', function(){
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
+ });
 })();
