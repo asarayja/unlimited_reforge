@@ -4,7 +4,7 @@ Web admin panel and in-game admin menu for **FiveM** (Qbox / QBCore) and **RedM*
 Runs on Windows and Linux, compatible with txAdmin, available in 12 languages.
 
 - Website and getting started: https://asarayja.github.io/unlimited_reforge/
-- Downloads: https://github.com/asarayja/unlimited_reforge/releases
+- Downloads: https://github.com/asarayja/unlimited_reforge/releases/latest
 
 ## Highlights
 
