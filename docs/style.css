@@ -107,3 +107,6 @@ h1,h2,h3,p,li,summary,figcaption{overflow-wrap:break-word}
 .to-top:focus-visible{outline:2px solid #fff;outline-offset:3px}
 .to-top[hidden]{display:none}
 @media (max-width:600px){.to-top{right:16px;bottom:16px;width:44px;height:44px}}
+@media(max-width:1180px){nav a{padding:6px 7px;font-size:.88rem}}
+nav{min-width:0;overflow-x:auto;scrollbar-width:none}nav::-webkit-scrollbar{display:none}@media(max-width:1300px){nav a{padding:6px 6px;font-size:.84rem}}
+nav{gap:0}nav a{padding:6px 7px;font-size:.88rem}.bar{gap:12px}.brand span{font-size:.95rem}

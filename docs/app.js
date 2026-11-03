@@ -45,7 +45,7 @@
  q.addEventListener('input',filter);
  document.getElementById('expAll').addEventListener('click',function(){areas.forEach(function(a){if(!a.hidden)a.open=true;});});
  document.getElementById('colAll').addEventListener('click',function(){areas.forEach(function(a){a.open=false;});});
- document.querySelectorAll('.toc a').forEach(function(a){a.addEventListener('click',function(){q.value='';filter();var d=document.getElementById(a.dataset.open);if(d)d.open=true;});});
+ document.querySelectorAll('a[data-open]').forEach(function(a){a.addEventListener('click',function(){q.value='';filter();var d=document.getElementById(a.dataset.open);if(d)d.open=true;});});
  if(location.hash.indexOf('#f-')===0){var h=document.getElementById(location.hash.slice(1));if(h)h.open=true;}
  apply(detect());
 })();
