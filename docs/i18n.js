@@ -2,6 +2,7 @@
 window.I18N = {
 en: {
 totop:"Back to top",
+lb_close:"Close",lb_prev:"Previous image",lb_next:"Next image",lb_img:"Image {n} of {t}",
 nav_f:"Web panel",nav_i:"In-game menu",nav_m:"Moderation",nav_r:"RedM",nav_s:"Get started",nav_q:"FAQ",
 h_badge:"Admin panel for FiveM & RedM",h_title:"Run your whole server from one panel",
 h_sub:"Unlimited Reforged is a web admin panel and in-game admin menu for FiveM and RedM servers: players, money, inventories, vehicles and horses, a live map, bans and staff tools.",
@@ -35,6 +36,7 @@ foot:"Unlimited Reforged is not affiliated with Rockstar Games, Cfx.re or the au
 },
 no: {
 totop:"Til toppen",
+lb_close:"Lukk",lb_prev:"Forrige bilde",lb_next:"Neste bilde",lb_img:"Bilde {n} av {t}",
 nav_f:"Webpanel",nav_i:"Meny i spillet",nav_m:"Moderering",nav_r:"RedM",nav_s:"Kom i gang",nav_q:"Vanlige spørsmål",
 h_badge:"Adminpanel for FiveM og RedM",h_title:"Styr hele serveren fra ett panel",
 h_sub:"Unlimited Reforged er et webbasert adminpanel og en adminmeny i spillet for FiveM- og RedM-servere: spillere, penger, inventar, kjøretøy og hester, levende kart, utestengelser og stabsverktøy.",
@@ -68,6 +70,7 @@ foot:"Unlimited Reforged er ikke tilknyttet Rockstar Games, Cfx.re eller utvikle
 },
 de: {
 totop:"Nach oben",
+lb_close:"Schließen",lb_prev:"Vorheriges Bild",lb_next:"Nächstes Bild",lb_img:"Bild {n} von {t}",
 nav_f:"Web-Panel",nav_i:"Spielmenü",nav_m:"Moderation",nav_r:"RedM",nav_s:"Loslegen",nav_q:"FAQ",
 h_badge:"Admin-Panel für FiveM & RedM",h_title:"Den ganzen Server aus einem Panel steuern",
 h_sub:"Unlimited Reforged ist ein Web-Admin-Panel mit Admin-Menü im Spiel für FiveM- und RedM-Server: Spieler, Geld, Inventare, Fahrzeuge und Pferde, Live-Karte, Banns und Team-Werkzeuge.",
@@ -101,6 +104,7 @@ foot:"Unlimited Reforged steht in keiner Verbindung zu Rockstar Games, Cfx.re od
 },
 dk: {
 totop:"Til toppen",
+lb_close:"Luk",lb_prev:"Forrige billede",lb_next:"Næste billede",lb_img:"Billede {n} af {t}",
 nav_f:"Webpanel",nav_i:"Menu i spillet",nav_m:"Moderation",nav_r:"RedM",nav_s:"Kom i gang",nav_q:"FAQ",
 h_badge:"Adminpanel til FiveM og RedM",h_title:"Styr hele serveren fra ét panel",
 h_sub:"Unlimited Reforged er et webbaseret adminpanel og en adminmenu i spillet til FiveM- og RedM-servere: spillere, penge, inventar, køretøjer og heste, live-kort, udelukkelser og staff-værktøjer.",
@@ -134,6 +138,7 @@ foot:"Unlimited Reforged er ikke tilknyttet Rockstar Games, Cfx.re eller udvikle
 },
 es: {
 totop:"Volver arriba",
+lb_close:"Cerrar",lb_prev:"Imagen anterior",lb_next:"Imagen siguiente",lb_img:"Imagen {n} de {t}",
 nav_f:"Panel web",nav_i:"Menú en el juego",nav_m:"Moderación",nav_r:"RedM",nav_s:"Empezar",nav_q:"Preguntas",
 h_badge:"Panel de administración para FiveM y RedM",h_title:"Gestiona todo tu servidor desde un solo panel",
 h_sub:"Unlimited Reforged es un panel de administración web con menú de administración en el juego para servidores FiveM y RedM: jugadores, dinero, inventarios, vehículos y caballos, mapa en vivo, baneos y herramientas para el staff.",
@@ -167,6 +172,7 @@ foot:"Unlimited Reforged no está afiliado a Rockstar Games, Cfx.re ni a los aut
 },
 et: {
 totop:"Tagasi üles",
+lb_close:"Sulge",lb_prev:"Eelmine pilt",lb_next:"Järgmine pilt",lb_img:"Pilt {n} / {t}",
 nav_f:"Veebipaneel",nav_i:"Mängusisene menüü",nav_m:"Modereerimine",nav_r:"RedM",nav_s:"Alusta",nav_q:"KKK",
 h_badge:"Haldusliides FiveM-ile ja RedM-ile",h_title:"Juhi kogu serverit ühest paneelist",
 h_sub:"Unlimited Reforged on veebipõhine haldusliides ja mängusisene admini menüü FiveM-i ja RedM-i serveritele: mängijad, raha, inventar, sõidukid ja hobused, reaalajas kaart, keelud ja personalitööriistad.",
@@ -200,6 +206,7 @@ foot:"Unlimited Reforged ei ole seotud Rockstar Gamesi, Cfx.re ega toetatud raam
 },
 nl: {
 totop:"Terug naar boven",
+lb_close:"Sluiten",lb_prev:"Vorige afbeelding",lb_next:"Volgende afbeelding",lb_img:"Afbeelding {n} van {t}",
 nav_f:"Webpaneel",nav_i:"Menu in het spel",nav_m:"Moderatie",nav_r:"RedM",nav_s:"Aan de slag",nav_q:"FAQ",
 h_badge:"Beheerpaneel voor FiveM en RedM",h_title:"Beheer je hele server vanuit één paneel",
 h_sub:"Unlimited Reforged is een web-beheerpaneel met beheermenu in het spel voor FiveM- en RedM-servers: spelers, geld, inventarissen, voertuigen en paarden, live kaart, bans en staffhulpmiddelen.",
@@ -233,6 +240,7 @@ foot:"Unlimited Reforged is niet gelieerd aan Rockstar Games, Cfx.re of de maker
 },
 pl: {
 totop:"Na górę",
+lb_close:"Zamknij",lb_prev:"Poprzedni obraz",lb_next:"Następny obraz",lb_img:"Obraz {n} z {t}",
 nav_f:"Panel webowy",nav_i:"Menu w grze",nav_m:"Moderacja",nav_r:"RedM",nav_s:"Start",nav_q:"FAQ",
 h_badge:"Panel administracyjny dla FiveM i RedM",h_title:"Zarządzaj całym serwerem z jednego panelu",
 h_sub:"Unlimited Reforged to webowy panel administracyjny oraz menu admina w grze dla serwerów FiveM i RedM: gracze, pieniądze, ekwipunki, pojazdy i konie, mapa na żywo, bany i narzędzia dla ekipy.",
@@ -266,6 +274,7 @@ foot:"Unlimited Reforged nie jest powiązany z Rockstar Games, Cfx.re ani autora
 },
 pt: {
 totop:"Voltar ao topo",
+lb_close:"Fechar",lb_prev:"Imagem anterior",lb_next:"Próxima imagem",lb_img:"Imagem {n} de {t}",
 nav_f:"Painel web",nav_i:"Menu no jogo",nav_m:"Moderação",nav_r:"RedM",nav_s:"Começar",nav_q:"Perguntas",
 h_badge:"Painel de administração para FiveM e RedM",h_title:"Gira todo o servidor a partir de um só painel",
 h_sub:"O Unlimited Reforged é um painel de administração web com menu de administração no jogo para servidores FiveM e RedM: jogadores, dinheiro, inventários, veículos e cavalos, mapa em direto, banimentos e ferramentas para a equipa.",
@@ -299,6 +308,7 @@ foot:"O Unlimited Reforged não é afiliado à Rockstar Games, à Cfx.re nem aos
 },
 tr: {
 totop:"Başa dön",
+lb_close:"Kapat",lb_prev:"Önceki görsel",lb_next:"Sonraki görsel",lb_img:"Görsel {n} / {t}",
 nav_f:"Web paneli",nav_i:"Oyun içi menü",nav_m:"Moderasyon",nav_r:"RedM",nav_s:"Başlarken",nav_q:"SSS",
 h_badge:"FiveM ve RedM için yönetim paneli",h_title:"Tüm sunucunu tek panelden yönet",
 h_sub:"Unlimited Reforged, FiveM ve RedM sunucuları için web tabanlı bir yönetim paneli ve oyun içi yönetici menüsüdür: oyuncular, para, envanterler, araçlar ve atlar, canlı harita, yasaklar ve ekip araçları.",
@@ -332,6 +342,7 @@ foot:"Unlimited Reforged; Rockstar Games, Cfx.re veya desteklenen framework'leri
 },
 cn: {
 totop:"返回顶部",
+lb_close:"关闭",lb_prev:"上一张图片",lb_next:"下一张图片",lb_img:"第 {n} 张,共 {t} 张",
 nav_f:"网页面板",nav_i:"游戏内菜单",nav_m:"管理处罚",nav_r:"RedM",nav_s:"快速开始",nav_q:"常见问题",
 h_badge:"适用于 FiveM 和 RedM 的管理面板",h_title:"在一个面板中管理整个服务器",
 h_sub:"Unlimited Reforged 是面向 FiveM 和 RedM 服务器的网页管理面板与游戏内管理菜单：玩家、金钱、库存、载具与马匹、实时地图、封禁和管理组工具。",
@@ -365,6 +376,7 @@ foot:"Unlimited Reforged 与 Rockstar Games、Cfx.re 或所支持框架的作者
 },
 ta: {
 totop:"மேலே செல்ல",
+lb_close:"மூடு",lb_prev:"முந்தைய படம்",lb_next:"அடுத்த படம்",lb_img:"படம் {n} / {t}",
 nav_f:"வலை பலகம்",nav_i:"விளையாட்டு மெனு",nav_m:"கட்டுப்பாடு",nav_r:"RedM",nav_s:"தொடங்குங்கள்",nav_q:"கேள்விகள்",
 h_badge:"FiveM மற்றும் RedM க்கான நிர்வாகப் பலகம்",h_title:"உங்கள் முழு சர்வரையும் ஒரே பலகத்தில் நிர்வகியுங்கள்",
 h_sub:"Unlimited Reforged என்பது FiveM மற்றும் RedM சர்வர்களுக்கான வலை நிர்வாகப் பலகமும் விளையாட்டுக்குள் நிர்வாக மெனுவும் ஆகும்: வீரர்கள், பணம், இருப்புகள், வாகனங்கள் மற்றும் குதிரைகள், நேரடி வரைபடம், தடைகள் மற்றும் பணியாளர் கருவிகள்.",

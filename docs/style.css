@@ -120,3 +120,29 @@ nav{gap:0}nav a{padding:6px 7px;font-size:.88rem}.bar{gap:12px}.brand span{font-
 .nx{margin-top:16px}
 .rel.next{border-color:rgba(251,191,36,.35)}
 .brand{flex-shrink:0}nav{margin-left:auto;padding-left:8px}
+
+/* lightbox */
+img[data-lb]{cursor:zoom-in}
+img[data-lb]:focus-visible{outline:2px solid var(--primary);outline-offset:3px}
+.lb{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;background:rgba(5,8,22,.94);opacity:0;visibility:hidden;transition:opacity .18s ease,visibility 0s .18s;touch-action:pan-y}
+.lb.open{opacity:1;visibility:visible;transition:opacity .18s ease}
+.lb-fig{margin:0;max-width:100%;padding:56px 64px 12px;display:flex;flex-direction:column;align-items:center;min-height:0;box-sizing:border-box;width:100%}
+.lb-img{max-width:100%;max-height:calc(100vh - 150px);max-height:calc(100dvh - 150px);width:auto;height:auto;object-fit:contain;border-radius:var(--r);border:1px solid rgba(255,255,255,.12);box-shadow:0 24px 60px rgba(0,0,0,.6)}
+.lb-cap{color:var(--sub);font-size:.95rem;margin:12px 0 0;text-align:center;overflow-wrap:break-word;max-width:100%}
+.lb-count{position:absolute;top:16px;left:20px;color:var(--sub);font-size:.9rem;font-variant-numeric:tabular-nums}
+.lb-btn{position:absolute;width:48px;height:48px;border-radius:50%;border:1px solid rgba(255,255,255,.14);background:rgba(20,27,45,.9);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0;transition:background .15s,transform .15s}
+.lb-btn:hover{background:linear-gradient(135deg,#6366f1,#8b5cf6)}
+.lb-btn:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.lb-close{top:10px;right:14px}
+.lb-prev{left:12px;top:50%;margin-top:-24px}
+.lb-next{right:12px;top:50%;margin-top:-24px}
+body.lb-lock{overflow:hidden}
+body.lb-lock .to-top{display:none}
+@media (max-width:600px){
+ .lb-fig{padding:60px 8px 12px}
+ .lb-img{max-height:calc(100vh - 190px);max-height:calc(100dvh - 190px)}
+ .lb-prev,.lb-next{top:auto;bottom:12px;margin:0}
+ .lb-prev{left:16px}.lb-next{right:16px}
+ .lb-cap{padding:0 64px;font-size:.88rem}
+}
+@media (prefers-reduced-motion:reduce){.lb,.lb.open{transition:none}}
