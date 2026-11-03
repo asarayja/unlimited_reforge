@@ -9,6 +9,18 @@
   for(var i=0;i<list.length;i++){var c=String(list[i]).toLowerCase().split('-')[0]; c=map[c]||c; if(L[c]) return c;}
   return 'en';
  }
+ var curCode='en';
+ function syncTheme(){
+  var light=document.documentElement.getAttribute('data-theme')==='light',d=L[curCode]||L.en,k=light?'theme_dark':'theme_light',t=d[k]||L.en[k]||'';
+  var tb=document.getElementById('themeBtn');tb.setAttribute('aria-label',t);tb.title=t;
+  var m=document.querySelector('meta[name=theme-color]');if(m)m.setAttribute('content',light?'#f4f6fc':'#0a0e27');
+ }
+ document.getElementById('themeBtn').addEventListener('click',function(){
+  var light=document.documentElement.getAttribute('data-theme')!=='light';
+  if(light)document.documentElement.setAttribute('data-theme','light');else document.documentElement.removeAttribute('data-theme');
+  try{localStorage.setItem('unl-theme',light?'light':'dark');}catch(e){}
+  syncTheme();
+ });
  function apply(code){
   var d=L[code]||L.en;
   document.documentElement.lang={no:'nb',dk:'da',cn:'zh-Hans'}[code]||code;
@@ -19,6 +31,7 @@
   document.getElementById('langFlag').src='flags/'+code+'.png';
   document.getElementById('langCode').textContent=code.toUpperCase();
   document.getElementById('langBtn').setAttribute('aria-label',(d.langlabel||'Language'));
+  curCode=code;syncTheme();
   document.querySelectorAll('#langList li').forEach(function(li){li.setAttribute('aria-selected',li.dataset.code===code?'true':'false');});
  }
  var btn=document.getElementById('langBtn'), list=document.getElementById('langList');
