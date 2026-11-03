@@ -1,5 +1,5 @@
 (function(){
- var _F=window.I18N_F||{};for(var c in window.I18N){var f=_F[c]||{};for(var k in f)window.I18N[c][k]=f[k];}
+ var _F=window.I18N_F||{},_N=window.I18N_N||{};for(var c in window.I18N){var f=_F[c]||{};for(var k in f)window.I18N[c][k]=f[k];f=_N[c]||{};for(var k in f)window.I18N[c][k]=f[k];}
 
  var L=window.I18N,F=window.I18N_F||{}, langs=window.I18N_LANGS, KEY='unl-lang';
  var map={nb:'no',nn:'no',da:'dk',zh:'cn',et:'et'};

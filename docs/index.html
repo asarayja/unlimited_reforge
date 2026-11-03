@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Unlimited Reforged: admin panel for FiveM and RedM</title>
-<meta name="description" content="Unlimited Reforged is a web admin panel and in-game admin menu for FiveM (Qbox, QBCore) and RedM (VORP) servers. Windows and Linux, txAdmin compatible, 12 languages.">
+<meta name="description" content="Unlimited Reforged is a web admin panel and in-game admin menu for FiveM (Qbox, QBCore) and RedM (VORP, RSG-Core soon) servers. Windows and Linux, txAdmin compatible, 12 languages.">
 <meta property="og:title" content="Unlimited Reforged">
 <meta property="og:description" content="Web admin panel and in-game admin menu for FiveM and RedM servers.">
 <meta property="og:image" content="https://asarayja.github.io/unlimited_reforge/img/dash.webp">
@@ -18,7 +18,7 @@
  <div class="wrap bar">
   <a class="brand" href="#top"><img src="img/logo.png" width="32" height="32" alt=""><span>Unlimited <b>Reforged</b></span></a>
   <nav aria-label="Main">
-   <a href="#panel" data-i="nav_f"></a><a href="#ingame" data-i="nav_i"></a><a href="#moderation" data-i="nav_m"></a><a href="#redm" data-i="nav_r"></a><a href="#details" data-i="nav_d"></a><a href="#f-script" data-i="nav_x" data-open="f-script"></a><a href="#start" data-i="nav_s"></a><a href="#faq" data-i="nav_q"></a>
+   <a href="#panel" data-i="nav_f"></a><a href="#ingame" data-i="nav_i"></a><a href="#moderation" data-i="nav_m"></a><a href="#redm" data-i="nav_r"></a><a href="#next" data-i="nav_n"></a><a href="#details" data-i="nav_d"></a><a href="#f-script" data-i="nav_x" data-open="f-script"></a><a href="#start" data-i="nav_s"></a><a href="#faq" data-i="nav_q"></a>
   </nav>
   <div class="lang">
    <button id="langBtn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="langList"><img id="langFlag" src="flags/en.png" width="20" height="14" alt=""><span id="langCode">EN</span><span aria-hidden="true">&#9662;</span></button>
@@ -72,6 +72,15 @@
  <div class="gallery g2"><figure><img src="img/rmap.webp" width="960" height="628" loading="lazy" data-alt="c_rmap" alt=""><figcaption data-i="c_rmap"></figcaption></figure><figure><img src="img/rhorse.webp" width="1400" height="750" loading="lazy" data-alt="c_rhorse" alt=""><figcaption data-i="c_rhorse"></figcaption></figure><figure><img src="img/rgang.webp" width="1400" height="750" loading="lazy" data-alt="c_rgang" alt=""><figcaption data-i="c_rgang"></figcaption></figure><figure><img src="img/rcons.webp" width="1400" height="750" loading="lazy" data-alt="c_rcons" alt=""><figcaption data-i="c_rcons"></figcaption></figure></div>
 </section>
 
+<section class="wrap" id="next" aria-labelledby="next-h">
+ <p class="badge soon" data-i="n_badge"></p>
+ <h2 id="next-h" data-i="n_title"></h2><p class="sub" data-i="n_sub"></p>
+ <h3 class="fwh" data-i="n_fw_t"></h3>
+ <ul class="chips fw"><li>FiveM · Qbox</li><li>FiveM · QBCore</li><li>RedM · VORP</li><li>RedM · RSG-Core <span class="tag" data-i="n_soon"></span></li></ul>
+ <div class="grid3"><article class="card"><h3 data-i="n1t"></h3><p data-i="n1d"></p></article><article class="card"><h3 data-i="n2t"></h3><p data-i="n2d"></p></article><article class="card"><h3 data-i="n3t"></h3><p data-i="n3d"></p></article><article class="card"><h3 data-i="n4t"></h3><p data-i="n4d"></p></article><article class="card"><h3 data-i="n5t"></h3><p data-i="n5d"></p></article><article class="card"><h3 data-i="n6t"></h3><p data-i="n6d"></p></article><article class="card"><h3 data-i="n7t"></h3><p data-i="n7d"></p></article><article class="card"><h3 data-i="n8t"></h3><p data-i="n8d"></p></article><article class="card"><h3 data-i="n9t"></h3><p data-i="n9d"></p></article></div>
+ <p class="sub nx" data-i="n_not"></p>
+</section>
+
 <section class="wrap" id="details" aria-labelledby="det-h">
  <h2 id="det-h" data-i="d_title"></h2><p class="sub" data-i="d_sub"></p>
  <div class="tools"><input id="q" type="search" data-ph="d_search" aria-label="" autocomplete="off"><button type="button" id="expAll" data-i="d_exp"></button><button type="button" id="colAll" data-i="d_col"></button></div>
@@ -100,11 +109,12 @@ ensure unlimited-reforge   # your folder name</code></pre>
 
 <section class="wrap" id="faq" aria-labelledby="faq-h">
  <h2 id="faq-h" data-i="q_title"></h2>
- <div class="faq"><details><summary data-i="q1"></summary><p data-i="a1"></p></details><details><summary data-i="q2"></summary><p data-i="a2"></p></details><details><summary data-i="q3"></summary><p data-i="a3"></p></details><details><summary data-i="q4"></summary><p data-i="a4"></p></details><details><summary data-i="q5"></summary><p data-i="a5"></p></details><details><summary data-i="q6"></summary><p data-i="a6"></p></details><details><summary data-i="q7"></summary><p data-i="a7"></p></details></div>
+ <div class="faq"><details><summary data-i="q1"></summary><p data-i="a1"></p></details><details><summary data-i="q2"></summary><p data-i="a2"></p></details><details><summary data-i="q3"></summary><p data-i="a3"></p></details><details><summary data-i="q4"></summary><p data-i="a4"></p></details><details><summary data-i="q5"></summary><p data-i="a5"></p></details><details><summary data-i="q6"></summary><p data-i="a6"></p></details><details><summary data-i="q7"></summary><p data-i="a7"></p></details><details><summary data-i="q8"></summary><p data-i="a8"></p></details></div>
 </section>
 
 <section class="wrap" id="changelog" aria-labelledby="cl-h">
  <h2 id="cl-h" data-i="l_title"></h2>
+ <div class="card rel next"><h3><span data-i="cl2_v"></span> <span class="sub2" data-i="cl2_t"></span> <span class="tag" data-i="n_soon"></span></h3><ul><li data-i="cl2_b1"></li><li data-i="cl2_b2"></li><li data-i="cl2_b3"></li><li data-i="cl2_b4"></li><li data-i="cl2_b5"></li><li data-i="cl2_b6"></li></ul></div>
  <div class="card rel"><h3><span data-i="cl_v"></span> <span class="sub2" data-i="cl_t"></span></h3><ul><li data-i="cl_b1"></li><li data-i="cl_b2"></li><li data-i="cl_b3"></li><li data-i="cl_b4"></li><li data-i="cl_b5"></li><li data-i="cl_b6"></li><li data-i="cl_b7"></li><li data-i="cl_b8"></li><li data-i="cl_b9"></li><li data-i="cl_b10"></li><li data-i="cl_b11"></li><li data-i="cl_b12"></li><li data-i="cl_b13"></li><li data-i="cl_b14"></li><li data-i="cl_b15"></li></ul></div>
  <p class="sub" data-i="l_body2"></p>
  <p><a class="btn" href="https://github.com/asarayja/unlimited_reforge/releases/latest" data-i="l_link"></a></p>
@@ -120,6 +130,7 @@ ensure unlimited-reforge   # your folder name</code></pre>
 <button id="toTop" class="to-top" type="button" data-ia="totop" hidden><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 5l-7 7 1.4 1.4L11 8.8V19h2V8.8l4.6 4.6L19 12z" fill="currentColor"/></svg></button>
 <script src="i18n.js"></script>
 <script src="i18n-features.js"></script>
+<script src="i18n-next.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
