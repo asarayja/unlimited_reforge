@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Unlimited Reforged: admin panel for FiveM and RedM</title>
-<meta name="description" content="Unlimited Reforged is a web admin panel and in-game admin menu for FiveM (Qbox, QBCore) and RedM (VORP, RSG-Core) servers. Windows and Linux, txAdmin compatible, 12 languages.">
+<meta name="description" content="Unlimited Reforged is a web admin panel and in-game admin menu for FiveM (Qbox, QBCore, ESX Legacy) and RedM (VORP, RSG-Core) servers. Windows and Linux, txAdmin compatible, 12 languages.">
 <meta property="og:title" content="Unlimited Reforged">
 <meta property="og:description" content="Web admin panel and in-game admin menu for FiveM and RedM servers.">
 <meta property="og:image" content="https://asarayja.github.io/unlimited_reforge/img/dash.webp">
@@ -79,11 +79,11 @@
 </section>
 
 <section class="wrap" id="next" aria-labelledby="next-h">
- <p class="badge soon" data-i="n_badge"></p>
+ <p class="badge" data-i="n_badge"></p>
  <h2 id="next-h" data-i="n_title"></h2><p class="sub" data-i="n_sub"></p>
  <h3 class="fwh" data-i="n_fw_t"></h3>
- <ul class="chips fw"><li>FiveM · Qbox</li><li>FiveM · QBCore</li><li>RedM · VORP</li><li>RedM · RSG-Core <span class="tag" data-i="n_soon"></span></li></ul>
- <div class="grid3"><article class="card"><h3 data-i="n1t"></h3><p data-i="n1d"></p></article><article class="card"><h3 data-i="n2t"></h3><p data-i="n2d"></p></article><article class="card"><h3 data-i="n3t"></h3><p data-i="n3d"></p></article><article class="card"><h3 data-i="n4t"></h3><p data-i="n4d"></p></article><article class="card"><h3 data-i="n5t"></h3><p data-i="n5d"></p></article><article class="card"><h3 data-i="n6t"></h3><p data-i="n6d"></p></article><article class="card"><h3 data-i="n7t"></h3><p data-i="n7d"></p></article><article class="card"><h3 data-i="n8t"></h3><p data-i="n8d"></p></article><article class="card"><h3 data-i="n9t"></h3><p data-i="n9d"></p></article></div>
+ <ul class="chips fw"><li>FiveM · Qbox</li><li>FiveM · QBCore</li><li>FiveM · ESX Legacy <span class="tag" data-i="n_soon"></span></li><li>RedM · VORP</li><li>RedM · RSG-Core</li></ul>
+ <div class="grid3"><article class="card"><h3 data-i="n1t"></h3><p data-i="n1d"></p></article><article class="card"><h3 data-i="n2t"></h3><p data-i="n2d"></p></article><article class="card"><h3 data-i="n3t"></h3><p data-i="n3d"></p></article><article class="card"><h3 data-i="n4t"></h3><p data-i="n4d"></p></article><article class="card"><h3 data-i="n5t"></h3><p data-i="n5d"></p></article><article class="card"><h3 data-i="n6t"></h3><p data-i="n6d"></p></article><article class="card"><h3 data-i="n7t"></h3><p data-i="n7d"></p></article><article class="card"><h3 data-i="n8t"></h3><p data-i="n8d"></p></article></div>
  <p class="sub nx" data-i="n_not"></p>
 </section>
 
@@ -106,8 +106,30 @@
  <pre class="cfg"><code># server.cfg
 ensure oxmysql
 ensure qbx_core        # or qb-core / vorp_core
+# ensure es_extended   # ESX Legacy (instead of qbx_core / qb-core)
 ensure ox_inventory    # or qb-inventory / vorp_inventory
+# ensure esx_inventory # ESX Legacy, if you do not use ox_inventory
 ensure unlimited-reforge   # your folder name</code></pre>
+ <article class="card fsp-card">
+  <h3 data-i="fsp_t"></h3>
+  <p data-i="fsp_d"></p>
+  <pre class="cfg"><code># Qbox
+add_filesystem_permission unlimited-reforge write qbx_core
+add_filesystem_permission unlimited-reforge write ox_inventory
+# QBCore
+add_filesystem_permission unlimited-reforge write qb-core
+add_filesystem_permission unlimited-reforge write ox_inventory   # only with ox_inventory
+# RSG-Core
+add_filesystem_permission unlimited-reforge write rsg-core
+# VORP
+add_filesystem_permission unlimited-reforge write vorp_inventory
+# ESX: not needed
+ensure unlimited-reforge</code></pre>
+  <p class="sub" data-i="fsp_order"></p>
+  <p class="sub" data-i="fsp_author"></p>
+  <pre class="cfg"><code>-- unlimited-reforge/fxmanifest.lua  and  qbx_core / ox_inventory fxmanifest.lua
+author 'Unlimited Reforged-Team'</code></pre>
+ </article>
  <p class="sub" data-i="g_docs"></p>
  <p class="sub" data-i="g_up"></p>
  <p class="cta"><a class="btn primary" href="https://github.com/asarayja/unlimited_reforge/releases/latest" data-i="h_dl"></a></p>
@@ -120,7 +142,8 @@ ensure unlimited-reforge   # your folder name</code></pre>
 
 <section class="wrap" id="changelog" aria-labelledby="cl-h">
  <h2 id="cl-h" data-i="l_title"></h2>
- <div class="card rel next"><h3><span data-i="cl2_v"></span> <span class="sub2" data-i="cl2_t"></span></h3><ul><li data-i="cl2_b1"></li><li data-i="cl2_b2"></li><li data-i="cl2_b3"></li><li data-i="cl2_b4"></li><li data-i="cl2_b5"></li><li data-i="cl2_b6"></li><li data-i="cl2_b7"></li><li data-i="cl2_b8"></li></ul></div>
+ <div class="card rel next"><h3><span data-i="cl3_v"></span> <span class="sub2" data-i="cl3_t"></span></h3><ul><li data-i="cl3_b1"></li><li data-i="cl3_b2"></li><li data-i="cl3_b3"></li><li data-i="cl3_b4"></li><li data-i="cl3_b5"></li><li data-i="cl3_b6"></li><li data-i="cl3_b7"></li><li data-i="cl3_b8"></li><li data-i="cl3_b9"></li></ul></div>
+ <div class="card rel"><h3><span data-i="cl2_v"></span> <span class="sub2" data-i="cl2_t"></span></h3><ul><li data-i="cl2_b1"></li><li data-i="cl2_b2"></li><li data-i="cl2_b3"></li><li data-i="cl2_b4"></li><li data-i="cl2_b5"></li><li data-i="cl2_b6"></li><li data-i="cl2_b7"></li><li data-i="cl2_b8"></li></ul></div>
  <div class="card rel"><h3><span data-i="cl_v"></span> <span class="sub2" data-i="cl_t"></span></h3><ul><li data-i="cl_b1"></li><li data-i="cl_b2"></li><li data-i="cl_b3"></li><li data-i="cl_b4"></li><li data-i="cl_b5"></li><li data-i="cl_b6"></li><li data-i="cl_b7"></li><li data-i="cl_b8"></li><li data-i="cl_b9"></li><li data-i="cl_b10"></li><li data-i="cl_b11"></li><li data-i="cl_b12"></li><li data-i="cl_b13"></li><li data-i="cl_b14"></li><li data-i="cl_b15"></li></ul></div>
  <p class="sub" data-i="l_body2"></p>
  <p><a class="btn" href="https://github.com/asarayja/unlimited_reforge/releases/latest" data-i="l_link"></a></p>

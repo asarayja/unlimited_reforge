@@ -193,3 +193,4 @@ body.lb-lock .to-top{display:none}
 .more-list a:hover,.more-list a:focus-visible{background:var(--ctl)}
 @media(max-width:960px){.bar nav{display:none}.more{margin-left:auto}.lang{margin-left:0}}
 .more-list[hidden],.more[hidden]{display:none}
+.fsp-card{margin:18px 0;min-width:0;max-width:100%}.fsp-card pre{max-width:100%}.fsp-card pre.cfg{margin:10px 0;overflow-x:auto}.fsp-card p{margin:8px 0}
