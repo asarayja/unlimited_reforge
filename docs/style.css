@@ -119,7 +119,7 @@ footer p{margin:0 0 8px}
 .bd.r{color:var(--br-fg);border-color:var(--br-bd);background:var(--br-bg)}
 .ab{padding:0 0 16px}
 .ad{color:var(--sub);margin:0 0 10px}
-.ab ul,.rel ul{margin:0 0 12px;padding-left:20px;color:var(--list)}
+.ab ul,.ab ol,.rel ul{margin:0 0 12px;padding-left:20px;color:var(--list)}
 .ab li,.rel li{margin-bottom:6px}
 .aw{margin:0;font-size:.9rem;color:var(--sub)}
 .aw b{color:var(--aw)}
@@ -194,3 +194,35 @@ body.lb-lock .to-top{display:none}
 @media(max-width:960px){.bar nav{display:none}.more{margin-left:auto}.lang{margin-left:0}}
 .more-list[hidden],.more[hidden]{display:none}
 .fsp-card{margin:18px 0;min-width:0;max-width:100%}.fsp-card pre{max-width:100%}.fsp-card pre.cfg{margin:10px 0;overflow-x:auto}.fsp-card p{margin:8px 0}
+
+/* For developers (#dev) */
+.dvs{display:grid;gap:10px}
+.dv{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:0 18px;min-width:0}
+.dv[open]{border-color:var(--open-bd)}
+.dv summary{cursor:pointer;padding:15px 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap;list-style:none}
+.dv summary::-webkit-details-marker{display:none}
+.dv summary::before{content:"\25B8";color:var(--link);transition:transform .15s}
+.dv[open] summary::before{transform:rotate(90deg)}
+.dv .ab{min-width:0}
+.dv pre.cfg{margin:10px 0 14px;max-width:100%;max-height:420px;overflow:auto}
+.dv .ab>.ad{max-width:780px}
+.tw{overflow-x:auto;max-width:100%;margin:10px 0 14px;border:1px solid var(--line);border-radius:10px}
+.tb{border-collapse:collapse;width:100%;font-size:.9rem}
+.tb th,.tb td{text-align:left;vertical-align:top;padding:9px 12px;border-bottom:1px solid var(--line)}
+.tb tr:last-child td{border-bottom:0}
+.tb th{color:var(--aw);font-weight:600;white-space:nowrap}
+.tb td{color:var(--sub)}
+.tb td code{color:var(--code-fg);background:var(--code-bg);border-radius:6px;padding:1px 6px;font-size:.84rem;overflow-wrap:anywhere}
+
+.tb td:nth-child(3){min-width:240px}
+.dv-q{margin-top:16px}
+@media(max-width:620px){
+.tw{overflow-x:visible;border:0}
+.tb,.tb tbody,.tb tr,.tb td{display:block;width:100%}
+.tb thead{display:none}
+.tb tr{border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin-bottom:8px}
+.tb td{padding:3px 0;border:0}
+.tb td:nth-child(3){min-width:0}
+.tb td code{overflow-wrap:anywhere;word-break:normal}
+.dv{padding:0 12px}
+}

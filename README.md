@@ -8,7 +8,8 @@ Runs on Windows and Linux, compatible with txAdmin, available in 12 languages.
 
 ## Highlights
 
-- New in v1.0.3: ESX Legacy on FiveM, in-game reports in the web panel, society money and money per job, To-Do categories, Cayo Perico on the Roxwood map, a write-permission check at startup and a quieter console
+- New in v1.0.4: a Support page with in-game reports and staff chat plus a notification bell, one search over all logs, script logs (ScriptLog export, Logs → Scripts) with a ready-made ox_inventory add-on, script inventories, adjustable report length limits, a quiet console with one Debug logging switch, a new-version notice, and /admin as the default in-game command on FiveM
+- v1.0.3: ESX Legacy on FiveM, in-game reports in the web panel, society money and money per job, To-Do categories, Cayo Perico on the Roxwood map
 - Web panel: dashboard, players and characters, money, jobs and gangs, inventories, items editor, vehicles / horses and wagons, live map, Live View (FiveM only), logs, economy, reports and bans, staff tools, whitelist, roles and permissions
 - In-game admin menu (full and compact): noclip, freecam, props, teleports, area tools, weather and time, map
 - Moderation: warn, kick, ban by license / Discord / HWID, ban-evasion detection, blocked joins log
