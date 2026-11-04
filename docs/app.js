@@ -61,6 +61,20 @@
  document.getElementById('colAll').addEventListener('click',function(){areas.forEach(function(a){a.open=false;});});
  document.querySelectorAll('a[data-open]').forEach(function(a){a.addEventListener('click',function(){q.value='';filter();var d=document.getElementById(a.dataset.open);if(d)d.open=true;});});
  if(location.hash.indexOf('#f-')===0){var h=document.getElementById(location.hash.slice(1));if(h)h.open=true;}
+ // Documentation: #doc-... opens the topic card and scrolls to it (tile click, link or address bar)
+ function openDoc(id,scroll){
+  var d=document.getElementById(id);if(!d||id.indexOf('doc-')!==0)return false;
+  if(d.tagName==='DETAILS')d.open=true;
+  if(scroll)setTimeout(function(){d.scrollIntoView({behavior:window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});},30);
+  return true;
+ }
+ document.addEventListener('click',function(e){
+  var a=e.target.closest&&e.target.closest('a[href^="#doc-"]');if(!a)return;
+  var id=a.getAttribute('href').slice(1);
+  if(openDoc(id,false)){e.preventDefault();if(location.hash!=='#'+id){try{history.pushState(null,'','#'+id);}catch(x){}}openDoc(id,true);}
+ });
+ window.addEventListener('hashchange',function(){if(location.hash.indexOf('#doc-')===0)openDoc(location.hash.slice(1),true);});
+ if(location.hash.indexOf('#doc-')===0)setTimeout(function(){openDoc(location.hash.slice(1),true);},120);
  apply(detect());
 })();
 
