@@ -182,3 +182,14 @@ body.lb-lock .to-top{display:none}
 .lb{--sub:rgba(255,255,255,.72);--text:#fff;--link:#a5b4fc;--focus:#c4b5fd}
 :root[data-theme=light] .to-top:focus-visible{outline-color:var(--focus)}
 @media(max-width:1300px){nav a{padding:6px 5px;font-size:.85rem}.bar{gap:10px}}
+
+/* Header nav "More" menu (priority+): nothing hides under the theme / language buttons */
+.bar nav{flex:0 1 auto;min-width:0;overflow:hidden;margin-left:auto;justify-content:flex-start}
+.more{position:relative;flex:none}
+#moreBtn{display:flex;align-items:center;justify-content:center;width:36px;height:34px;padding:0;background:var(--ctl);color:var(--text);border:1px solid var(--line);border-radius:10px;cursor:pointer}
+#moreBtn:hover{background:var(--ctl-hov)}
+.more-list{position:absolute;right:0;top:calc(100% + 8px);min-width:210px;max-height:70vh;overflow:auto;display:flex;flex-direction:column;gap:2px;padding:6px;background:var(--card,var(--hdr));border:1px solid var(--line);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.35);z-index:30}
+.more-list a{color:var(--text);text-decoration:none;padding:8px 12px;border-radius:8px;font-size:.93rem;white-space:nowrap}
+.more-list a:hover,.more-list a:focus-visible{background:var(--ctl)}
+@media(max-width:960px){.bar nav{display:none}.more{margin-left:auto}.lang{margin-left:0}}
+.more-list[hidden],.more[hidden]{display:none}

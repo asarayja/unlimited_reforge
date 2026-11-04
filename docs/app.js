@@ -33,6 +33,7 @@
   document.getElementById('langBtn').setAttribute('aria-label',(d.langlabel||'Language'));
   curCode=code;syncTheme();
   document.querySelectorAll('#langList li').forEach(function(li){li.setAttribute('aria-selected',li.dataset.code===code?'true':'false');});
+  if(window.unlFitNav)window.unlFitNav();
  }
  var btn=document.getElementById('langBtn'), list=document.getElementById('langList');
  langs.forEach(function(p){
@@ -72,4 +73,32 @@
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   window.scrollTo({top:0, behavior: reduce ? 'auto' : 'smooth'});
  });
+})();
+
+// Header nav: links that do not fit go into the "More" menu instead of being cut off
+// under the theme / language buttons (also gives the nav back on small screens).
+(function(){
+ var nav=document.querySelector('.bar nav'), wrap=document.getElementById('navMore'), btn=document.getElementById('moreBtn'), list=document.getElementById('moreList');
+ if(!nav||!wrap)return;
+ var links=Array.prototype.slice.call(nav.querySelectorAll('a'));
+ function close(){list.hidden=true;btn.setAttribute('aria-expanded','false');}
+ function fit(){
+  links.forEach(function(a){nav.appendChild(a);});
+  wrap.hidden=true; nav.style.display='';
+  if(window.matchMedia('(max-width:960px)').matches){links.forEach(function(a){list.appendChild(a);});wrap.hidden=false;return;}
+  wrap.hidden=false;
+  var moved=[];
+  while(nav.scrollWidth>nav.clientWidth+1&&nav.lastElementChild){var a=nav.lastElementChild;moved.unshift(a);nav.removeChild(a);}
+  moved.forEach(function(a){list.appendChild(a);});
+  wrap.hidden=moved.length===0;
+  if(wrap.hidden)close();
+ }
+ window.unlFitNav=fit;
+ btn.addEventListener('click',function(e){e.stopPropagation();var o=list.hidden;list.hidden=!o;btn.setAttribute('aria-expanded',o?'true':'false');if(o){var f=list.querySelector('a');if(f)f.focus();}});
+ list.addEventListener('click',function(e){if(e.target.closest('a'))close();});
+ document.addEventListener('click',function(e){if(!e.target.closest('#navMore'))close();});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!list.hidden){close();btn.focus();}});
+ var t;window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(fit,80);});
+ if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fit);
+ fit();
 })();
