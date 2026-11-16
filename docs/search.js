@@ -27,6 +27,7 @@
    var el=nodes[i];
    var hid=el.closest('[hidden]');if(el.closest('#siteSearch')||(hid&&!hid.classList.contains('area')))continue; // the feature filter's hidden cards still count
    if(el.querySelector('[data-i]'))continue; // a container: its children are indexed on their own
+   if(el.closest('.ss-skip'))continue; // jump links that only repeat a title found elsewhere
    var text=(el.textContent||'').replace(/\s+/g,' ').trim();
    if(text.length<2)continue;
    out.push({el:el,text:text,n:norm(text),where:where(el),code:el.tagName==='CODE'||!!el.closest('pre')});

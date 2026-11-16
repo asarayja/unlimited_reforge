@@ -89,6 +89,21 @@ figcaption{color:var(--sub);font-size:.88rem;margin-top:8px}
 .steps li::before{content:counter(s);position:absolute;left:14px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:grid;place-items:center;font-weight:700;color:#fff}
 pre{margin:10px 0 0;padding:12px 14px;background:var(--code-bg);border:1px solid var(--line);border-radius:10px;overflow-x:auto;font-size:.88rem;color:var(--code-fg)}
 .cfg{margin:20px 0}
+/* Set up step by step (#setup) */
+.setup-steps{counter-reset:su;display:grid;gap:14px;margin-top:16px}
+.setup-steps .card{counter-increment:su;position:relative;min-width:0;padding:18px 18px 16px 66px}
+.setup-steps .card::before{content:counter(su);position:absolute;left:16px;top:16px;width:32px;height:32px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:grid;place-items:center;font-weight:700;color:#fff}
+.setup-steps h3{margin:5px 0 8px;font-size:1.1rem}
+.setup-steps .card p,.setup-steps .card li{color:var(--sub);font-size:.95rem}
+.setup-steps .card p{margin:8px 0 0}
+.setup-steps .card ul,.setup-steps .card ol{margin:8px 0 0;padding-left:20px;max-width:780px}
+.setup-steps .card li{margin:4px 0}
+.setup-steps pre.cfg{margin:10px 0 0;max-width:100%}
+.setup-steps .dlinks{font-size:.92rem}
+.setup-steps .dlinks a{color:var(--link)}
+.setup-steps .sdone{margin-top:14px;padding-top:10px;border-top:1px dashed var(--line);color:var(--text)}
+.setup-steps .sdone::before{content:"\2713\00a0";color:var(--link);font-weight:700}
+@media(max-width:620px){.setup-steps .card{padding:14px}.setup-steps .card::before{position:static;margin-bottom:8px}}
 .faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;padding:0 16px}
 .faq summary{cursor:pointer;padding:14px 0;font-weight:600}
 .faq p{margin:0 0 14px;color:var(--sub)}
